@@ -13,8 +13,8 @@ rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.r
 # MUST packages
 yum install -y strace tree nano zsh rsync openssh-clients sysstat dstat tcpdum
 
-# build tools
-yum install -y gcc make
+# dev tools
+yum install -y gcc make gdb man man-pages telnet colordiff screen
 
 # docker-io
 yum install -y docker-io
