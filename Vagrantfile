@@ -13,6 +13,9 @@ rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.r
 # docker-io
 yum install -y docker-io
 
+# MUST packages
+yum install -y strace dstat tree nano zsh rsync
+
 # httpd
 #yum install httpd
 EOT
