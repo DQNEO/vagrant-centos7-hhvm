@@ -13,6 +13,8 @@ rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.r
 # docker-io
 yum install -y docker-io
 
+# httpd
+#yum install httpd
 EOT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
