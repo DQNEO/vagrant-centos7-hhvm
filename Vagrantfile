@@ -20,7 +20,17 @@ yum install -y gcc make
 yum install -y docker-io
 
 # httpd
-#yum install httpd
+#yum install -y httpd
+
+# nginx
+#yum install -y nginx
+
+# TC
+#yum install -y tokyocabinet
+
+# memcachdd
+#yum install -y memcached
+
 EOT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
