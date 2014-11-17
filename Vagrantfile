@@ -10,11 +10,11 @@ yum update -y
 # epel
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
-# docker-io
-yum install -y docker-io
-
 # MUST packages
 yum install -y strace dstat tree nano zsh rsync
+
+# docker-io
+yum install -y docker-io
 
 # httpd
 #yum install httpd
