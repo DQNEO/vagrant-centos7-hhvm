@@ -31,6 +31,10 @@ yum install -y docker-io
 # memcachdd
 #yum install -y memcached
 
+
+# mod_orz
+# yum install -y http-devel
+
 EOT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
