@@ -18,6 +18,9 @@ yum install -y strace tree nano zsh rsync openssh-clients sysstat dstat tcpdum
 # dev tools
 yum install -y gcc make gdb man man-pages telnet colordiff screen
 
+# disable SELinux
+setenforce 0
+
 # docker
 yum install -y docker
 
