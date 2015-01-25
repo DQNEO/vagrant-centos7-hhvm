@@ -8,7 +8,9 @@ $script = <<EOT
 yum update -y
 
 # epel
-rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+#rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+
+yum install -y epel-release
 
 # MUST packages
 yum install -y strace tree nano zsh rsync openssh-clients sysstat dstat tcpdum
@@ -16,14 +18,15 @@ yum install -y strace tree nano zsh rsync openssh-clients sysstat dstat tcpdum
 # dev tools
 yum install -y gcc make gdb man man-pages telnet colordiff screen
 
-# docker-io
-yum install -y docker-io
+# docker
+yum install -y docker
 
 # httpd
 #yum install -y httpd
 
-# nginx
-#yum install -y nginx
+## nginx
+# rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+# yum install --enablerepo=nginx -y nginx
 
 # TC
 #yum install -y tokyocabinet
@@ -38,10 +41,8 @@ yum install -y docker-io
 EOT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # my original box with chef installed
-  config.vm.box = "chef/centos-6.6"
-  # chef official box wihout chef installed :(
-  #config.vm.box = "chef/centos-6.5"
+  config.vm.box = "chef/centos-7.0"
+
   config.vm.network :private_network, ip: "10.10.10.10"
 
   config.vm.provision "shell", inline: $script
