@@ -1,6 +1,4 @@
 # -*- mode: ruby -*-
-VAGRANTFILE_API_VERSION = "2"
-
 # SHELL PROVISIONER
 # https://docs.vagrantup.com/v2/provisioning/shell.html
 
@@ -43,7 +41,7 @@ yum install -y docker
 
 EOT
 
-Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+Vagrant.configure("2") do |config|
   config.vm.box = "chef/centos-7.0"
 
   config.vm.network :private_network, ip: "10.10.10.10"
