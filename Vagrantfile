@@ -3,7 +3,8 @@
 # https://docs.vagrantup.com/v2/provisioning/shell.html
 
 $script = <<EOT
-  #yum update -y
+ #yum update -y
+
  yum install -y epel-release
 
  rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
