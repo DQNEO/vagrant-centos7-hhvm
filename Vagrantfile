@@ -10,6 +10,8 @@ $script = <<EOT
  rpm -Uvh http://yum.gleez.com/6/x86_64/gleez-repo-6-0.el6.noarch.rpm
  sed -i 's|baseurl=http://yum.gleez.com/6/$basearch/|baseurl=http://yum.gleez.com/7/$basearch/|g' /etc/yum.repos.d/gleez.repo
  yum --nogpgcheck -y install hhvm
+
+ hhvm --version
 EOT
 
 Vagrant.configure("2") do |config|
